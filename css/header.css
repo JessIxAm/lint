@@ -5,15 +5,14 @@
 
      --bg-primary:#fefefe;
      --bg-secondary:#e7e7e7;
-
 }
 
 /** HEADER **/
 #header{
-     /* background-color: rgba(115, 99, 185, 0.164); */
+     
 }
 nav.navbar{
-     /* background-color: rgba(64, 224, 208, 0.575); */
+     
 }
      /*logo navbar-brand START*/
      #header .navbar-brand{
@@ -23,6 +22,9 @@ nav.navbar{
           padding: 0;
 
           justify-content: flex-start;
+     }
+     .navbar-brand .logo::after { 
+          display: none !important;
      }
      /*logo END*/
      .nav-item.account{
@@ -53,6 +55,7 @@ nav.navbar{
      .navbar-toggler{
           border:none; /*? removing bootstrap styles*/
           outline: none;
+          cursor: pointer;
 
           height: 40px;
           width: 40px;
@@ -118,13 +121,6 @@ nav.navbar{
      /*burger menu END */
 
      /*menu START*/
-     #navbarSupportedContent{
-     }
-     ul.navbar-nav{
-     }
-     .navbar-nav .nav-item{
-          
-     }
      .navbar-nav .nav-link{
           text-align: right; 
           
@@ -140,7 +136,7 @@ nav.navbar{
           font-weight: 700;
      }
 
-     nav a::after {
+     nav a::after { 
      content: "";
      position: absolute;
      bottom: 0;
@@ -160,6 +156,7 @@ nav.navbar{
           /*--> search "button"*/
           #navbarSupportedContent #search_form{
                justify-content: space-between;
+               
           }
           #search_form input{
                background-color: var(--bg-secondary);
@@ -173,7 +170,18 @@ nav.navbar{
                height: 36px;
                flex-shrink: 0;
                background-color: var(--bg-secondary);
-
           }
+     /*menu END*/
 
-     /*menu END/
+     @media (min-width:992px){
+          ul.navbar-nav{
+               margin-right: 1rem !important;
+          }
+          #navbarSupportedContent #search_form{
+               margin-left: auto;
+               max-width: 400px;
+          }
+          .navbar-nav .nav-item{
+               margin-right: .5rem;
+          }
+     }
