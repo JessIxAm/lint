@@ -1,6 +1,7 @@
 :root{
      --color-primary: #444;
      --color-accent: #009aee;
+     --color-accent--700: #0d6efd;
      --clr-accent-sec:#f63877;
 
      --bg-primary:#fefefe;
@@ -11,4 +12,91 @@
 body *{
      font-family:'Spartan', sans-serif !important;
      color: var(--color-primary) !important;
+
+     font-size: 16px;
+     line-height: 1.24; 
 }
+/**main START**/
+main#main{
+     position: relative;
+}
+     /* banner START */
+     #main .banner{
+          position: relative; /*! to remove */
+     }    
+          /*--intro*/
+          .banner .intro{
+            position: relative; /*! to remove */   
+          }
+               .intro .title{
+                    font-size: calc(1.7rem + 1vw);
+                    font-weight: 700;
+
+                    margin: 0 0 1.8rem;
+               }
+               .intro .intro_p{
+                    line-height: 1.5;
+                    margin-bottom: 1rem;
+               }
+               .intro_button button{
+                    min-width: 18.5rem ;
+                    margin-bottom: 1.5rem;
+                    padding: .5rem 1rem !important;
+                    color: var(--bg-primary) !important;
+                    height: 42px;
+                    border: none;
+
+                    transition: background-color 0.6s ease-in ;
+               }
+               .intro_button button:first-of-type{
+                    background-color: var(--color-accent);
+               }
+               .intro_button button:first-of-type:hover,
+               .intro_button button:first-of-type:focus,
+               .intro_button button:first-of-type:active{
+                    background-color: var(--clr-accent-sec);
+                    box-shadow: none;
+               }
+               .intro_button button:last-of-type{
+                    background-color: var(--color-accent--700);
+               }
+               .intro_button button:last-of-type:hover,
+               .intro_button button:last-of-type:focus,
+               .intro_button button:last-of-type:active{
+                    background-color: var(--clr-accent-sec);
+                    box-shadow: none;
+               }
+
+          /*--banner_show*/
+          .banner_show{
+               position: relative;
+          }
+
+               /* banner decoration div START */
+               .banner_show .banner_deco{
+                    position: absolute;
+                    z-index: -1;
+                    height: 100%;
+                    width: 100%;
+               }
+               /* banner decoration div END */
+
+          /*--banner_show END */
+     /* banner END */
+
+
+
+
+
+
+
+
+
+
+
+          
+          
+          
+    
+
+/**main END**/

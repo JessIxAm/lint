@@ -43,6 +43,12 @@ nav.navbar{
                padding: .5rem .4rem;
                font-size: .8rem;
           }
+
+          /*todo added after to tweak*/
+               #search_form input,
+               #search_form .search_icon{
+                    background-color: transparent !important;
+               }
      }
      .nav-item.account .nav-link:hover,
      .nav-item.account .nav-link:focus{
