@@ -31,15 +31,22 @@ nav.navbar{
 
           border-radius: 5px;
           outline: none;
+          font-weight: 700;
      }
      .nav-item.account .nav-link{
           transition: all .6s ease-in;
+     }
+     @media (max-width:350px){
+          .nav-item.account .nav-link{
+               padding: .5rem .4rem;
+               font-size: .8rem;
+          }
      }
      .nav-item.account .nav-link:hover,
      .nav-item.account .nav-link:focus{
           background-color: var(--clr-accent-sec);
           color: var(--bg-primary) !important; 
-          font-weight: 700;
+          
      }
 
      /*burger menu START*/
@@ -150,6 +157,23 @@ nav.navbar{
      nav a:hover::after {
      transform: scaleY(1);
      }
+          /*--> search "button"*/
+          #navbarSupportedContent #search_form{
+               justify-content: space-between;
+          }
+          #search_form input{
+               background-color: var(--bg-secondary);
+               width: 86%;
+               font-size: 1.1rem;
+               padding: .3rem .2rem;
+          }
+          #search_form  .search_icon{
+               margin-left: auto;
+               width: 36px;
+               height: 36px;
+               flex-shrink: 0;
+               background-color: var(--bg-secondary);
 
+          }
 
      /*menu END/
