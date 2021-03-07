@@ -1,0 +1,155 @@
+:root{ /*!to remove at the end*/
+     --color-primary: #444;
+     --color-accent: #009aee;
+     --clr-accent-sec:#f63877;
+
+     --bg-primary:#fefefe;
+     --bg-secondary:#e7e7e7;
+
+}
+
+/** HEADER **/
+#header{
+     /* background-color: rgba(115, 99, 185, 0.164); */
+}
+nav.navbar{
+     /* background-color: rgba(64, 224, 208, 0.575); */
+}
+     /*logo navbar-brand START*/
+     #header .navbar-brand{
+          width: calc(7.5rem + .8vw);
+          min-width: 100px;
+          max-width: 150px;
+          padding: 0;
+
+          justify-content: flex-start;
+     }
+     /*logo END*/
+     .nav-item.account{
+          position: relative;
+          right: 10px;
+
+          border-radius: 5px;
+          outline: none;
+     }
+     .nav-item.account .nav-link{
+          transition: all .6s ease-in;
+     }
+     .nav-item.account .nav-link:hover,
+     .nav-item.account .nav-link:focus{
+          background-color: var(--clr-accent-sec);
+          color: var(--bg-primary) !important; 
+          font-weight: 700;
+     }
+
+     /*burger menu START*/
+     .navbar-toggler{
+          border:none; /*? removing bootstrap styles*/
+          outline: none;
+
+          height: 40px;
+          width: 40px;
+
+     }
+     .navbar-toggler:active,
+     .navbar-toggler:focus{
+          box-shadow: none;
+     }
+     .navbar-toggler:hover{
+          background-color: rgba(68, 68, 68, 0.164);
+          border-radius: 50%;
+     }
+
+
+     .navbar-light .navbar-toggler-icon {
+          background-image: none; /*? removing bootstrap styles*/
+          background-color: var(--color-primary);
+
+          flex-shrink: 0;
+          width: 26px;
+          height: 3px;
+          border-radius: 3px;
+          position: relative;
+          transition: all .6s ease-in;
+     }
+     .navbar-toggler-icon::before,
+     .navbar-toggler-icon::after{
+          content: "";
+          height: 3px;
+          width: 100%;
+          left:0;
+          background-color: var(--color-accent);
+          border-radius: 3px;
+          position: absolute;
+          transition: all .6s ease-in;
+     }
+     .navbar-toggler-icon::before{
+          top: -9px;
+          
+     }
+     .navbar-toggler-icon::after{
+          top: 9px;
+     }
+          /*?turning effect*/
+          #menu-hbg:checked ~ label .navbar-toggler-icon {
+               transform: rotate(45deg);
+          }
+          #menu-hbg:checked ~ label .navbar-toggler-icon:before,
+          #menu-hbg:checked ~ label .navbar-toggler-icon:after {
+               transform: rotate(90deg);
+               top: 0;
+          }
+
+          /*?spinning effect on hover***/
+          #menu-hbg:checked:hover ~ label .navbar-toggler-icon {
+               transform: rotate(315deg);
+          }
+          #menu-hbg:checked:hover ~ label .navbar-toggler-icon:before,
+          #menu-hbg:checked:hover ~ label .navbar-toggler-icon:after {
+               transform: rotate(270deg);
+          }
+     /*burger menu END */
+
+     /*menu START*/
+     #navbarSupportedContent{
+     }
+     ul.navbar-nav{
+     }
+     .navbar-nav .nav-item{
+          
+     }
+     .navbar-nav .nav-link{
+          text-align: right; 
+          
+          position: relative;
+          z-index: 400;
+
+          transition: color 0.25s ease-in-out, background-color 0.5s ease-in-out;
+     }
+
+     .navbar-nav .nav-link:hover {
+          z-index: 400;
+          color: var(--bg-primary) !important;
+          font-weight: 700;
+     }
+
+     nav a::after {
+     content: "";
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     transform: scaleY(0);
+     transform-origin: bottom center;
+     background: var(--color-accent);
+     z-index: -1;
+     transition: transform 0.6s;
+     }
+
+     nav a:hover::after {
+     transform: scaleY(1);
+     }
+
+
+     /*menu END/
