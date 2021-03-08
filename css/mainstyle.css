@@ -3,7 +3,8 @@
      --color-accent: #009aee;
      --color-accent--700: #0d6efd;
      --clr-accent-sec:#f63877;
-
+     --clr-accent-sec--200:#f638771a;
+     
      --bg-primary:#fefefe;
      --bg-secondary:#e7e7e7;
 
@@ -16,6 +17,9 @@ body *{
      font-size: 16px;
      line-height: 1.24; 
 }
+p{
+     line-height: 1.5 !important;
+}
 /**main START**/
 main#main{
      position: relative;
@@ -23,6 +27,7 @@ main#main{
      /* banner START */
      #main .banner{
           position: relative; /*! to remove */
+          margin-bottom: calc(1.8rem + 2vw);
      }    
           /*--intro*/
           .banner .intro{
@@ -30,12 +35,11 @@ main#main{
           }
                .intro .title{
                     font-size: calc(1.7rem + 1vw);
-                    font-weight: 700;
+                    font-weight: 900;
 
                     margin-bottom: calc(.8rem + 2vw);
                }
                .intro .intro_p{
-                    line-height: 1.5;
                     margin-bottom: calc(1rem + 2vw);
                }
                .intro_button{
@@ -100,13 +104,106 @@ main#main{
                text-align: left;
           }
      }
-     @media (min-width:485px) and (max-width:991px){
+     @media (min-width:485px) and (max-width:991px){   /*todo special tweak */
           .banner_show .banner_show_img{
                max-width: 55%;
           }
      }
      /* banner END */
 
+     /* service_cards START */
+          .service_cards{
+               position: relative;
+               margin-bottom: calc(1.8rem + 2vw);
+          }
+               .service_cards .card{
+                    position: relative;
+                    border: none;
+                    background-color: var(--bg-secondary);
+                    padding: 1rem;
+                    border-radius: 15px;
+                    
+               }
+               .service_cards .card:first-of-type{
+                    margin-bottom: 3rem;
+               }
+                    .card .card_icon{
+                         width: 70px;
+                         height: 70px;
+                         border-radius: 50%;
 
+                         background-color: var(--clr-accent-sec--200);
+
+                         position: absolute;
+                         top: -9%;
+                         left: 10%;
+                    }
+                    .card_icon img{
+                         width: 60%;
+                    }
+                    .card .card_title{
+                         font-size: calc(1.2rem + .8vw);
+                         font-weight: 600;
+                         margin: 2rem 0;
+                         width: 100%;
+
+                         text-align: left;
+                    }
+                    .card p{
+                         font-weight: 300;
+                         margin-bottom: calc(1rem + 2vw);
+                    }
+                    .link{
+                         width: 100%;
+                         text-align: left;
+                         font-weight: 500;
+
+                         font-size: calc(1rem + .5vw);
+                         color: var(--color-accent) !important;
+
+                         display: inline-block;
+                         position: relative;
+
+                         transition: all .2s linear;
+                    }
+                    .link:hover, /*todo try to use after on this */
+                    .link:focus,
+                    .link:active{
+                         border-bottom: 6px solid var(--color-accent);
+                    }
+
+                    /*!not working
+                     .link::after{
+                         content: '';
+                         position: absolute;
+                         top: 0;
+                         right: 0;
+                         width: 20%;
+                         height: 110%;
+                         z-index: 10;
+                    }
+
+                    .link::after:hover{
+                         border-bottom: 2px solid var(--color-accent);
+                    } */
+     
+     /* service_cards END */
+     @media (min-width:992px){
+          .wrapper .service_cards{
+               flex-direction: row;
+               justify-content: space-evenly;
+               margin-top: 4rem;
+          }
+          .service_cards .card{
+               flex: 0 0 48%;
+               height: 100%;
+          }
+          .service_cards .card:last-of-type{
+               margin-bottom: 3rem;
+          }
+          .service_cards .intro .intro_button{
+               text-align: left;
+          }
+     }
 
 /**main END**/
