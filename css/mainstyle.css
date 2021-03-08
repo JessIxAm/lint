@@ -76,6 +76,7 @@ main#main{
           }
           .banner_show .banner_show_img{
                max-width: 90%;
+               pointer-events: none;
           }
 
                /* banner decoration div START */
@@ -83,6 +84,27 @@ main#main{
                /* banner decoration div END */
 
           /*--banner_show END */
+     /*! banner for xl devices */
+     @media (min-width:992px){
+          .wrapper .banner{
+               flex-direction: row;
+          }
+          .banner .intro,
+          .banner .banner_show{
+               flex: 0 0 50%;
+          }
+          .banner .intro{
+               align-items: flex-start;
+          }
+          .banner .intro .intro_button{
+               text-align: left;
+          }
+     }
+     @media (min-width:485px) and (max-width:991px){
+          .banner_show .banner_show_img{
+               max-width: 55%;
+          }
+     }
      /* banner END */
 
 

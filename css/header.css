@@ -175,7 +175,7 @@ nav.navbar{
                width: 36px;
                height: 36px;
                flex-shrink: 0;
-               background-color: var(--bg-secondary);
+               /* background-color: var(--bg-secondary); */
           }
      /*menu END*/
 
