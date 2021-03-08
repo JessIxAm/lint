@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Palanquin:wght@700&display=swap');
 :root{
      --color-primary: #444;
      --color-accent: #009aee;
@@ -14,7 +15,7 @@ body *{
      font-family:'Spartan', sans-serif !important;
      color: var(--color-primary) !important;
 
-     font-size: 16px;
+     /* font-size: 16px; */
      line-height: 1.24; 
 }
 p{
@@ -114,7 +115,7 @@ main#main{
      /* service_cards START */
           .service_cards{
                position: relative;
-               margin-bottom: calc(1.8rem + 2vw);
+               margin-bottom: calc(3rem + 2vw);
           }
                .service_cards .card{
                     position: relative;
@@ -173,7 +174,7 @@ main#main{
                     }
 
                     /*!not working
-                     .link::after{
+                    .link::after{
                          content: '';
                          position: absolute;
                          top: 0;
@@ -187,7 +188,7 @@ main#main{
                          border-bottom: 2px solid var(--color-accent);
                     } */
      
-     /* service_cards END */
+     
      @media (min-width:992px){
           .wrapper .service_cards{
                flex-direction: row;
@@ -205,5 +206,115 @@ main#main{
                text-align: left;
           }
      }
+     /* service_cards END */
 
+     /**SECTION MISC START**/
+     .misc{
+          position: relative;
+          background: url('https://www.fing.com/images/uploads/banners/TESTIMONIAL_BACKGROUND_IMAGE_1140x530px_V2.jpg');
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          
+          padding: 3rem 1rem; 
+     }
+
+          .misc .community_overlay{
+               position: absolute;
+               top: 0; bottom: 0;
+               height: 100%; width: 100%;
+               background-color: rgba(0, 0, 0, 0.26);
+               z-index: 50;
+          }
+          .misc .community{
+               /*? hahahaha nothing here */
+          }
+               .community .community_item{
+                    position: relative;
+                    z-index: 100;
+
+                    align-items: flex-start;
+               }
+               .community_item *{
+                    color: #fff !important;
+               }
+                    .community_item .img_container{
+                         height: 60px;
+                         width: 60px;
+                         border-radius: 50%;
+
+                         background-color: rgba(255, 255, 255, 0.432);
+
+                         margin-bottom: calc(2rem + .5vw);
+                    }
+                         .img_container img{
+                              width: 60%;
+                         }
+
+                    .community_item h3{
+                         font-weight: 600; 
+                         margin-bottom: calc(2rem + .5vw);
+                    }
+
+                    .community_item .stars{
+                         width: 50%;
+                         margin-bottom: calc(2rem + .5vw);
+                    }
+
+                    .community_item .ratings{
+                         width: 100%;
+                         margin-bottom: calc(2rem + .5vw);
+                         justify-content: space-between;
+                    }
+                         .ratings_item{
+                              /* width: 70%; */
+                              margin-bottom: calc(1rem + .5vw);
+                         }
+                              .ratings_item .store{
+                                   font-weight: 600;
+                                   font-size: calc(.6rem + .5vw);
+                              }
+
+                    .community_item .download_btn{
+                         width: 100%;
+                         margin-bottom: calc(2rem + .5vw);
+                         justify-content: space-between;
+                    }
+                         .download_btn a{
+                              display: inline-block;
+                              width: 98%;
+                              height: 40px;
+                              text-align: left;
+                         }
+                              .download_btn a img{
+                                   max-width: 150px;
+                                   height: 40px;
+                              }
+                         .download_btn .app_store{
+                              text-align: right;
+                         }
+                    .community_item.quote{
+                         background-color: var(--bg-primary);
+                         border-radius: 20px;
+                         padding: 2rem;
+                         position: relative;
+                    }
+                    .community_item.quote::before{
+                                   content: '\0022';
+                                   font-family: 'Palanquin', sans-serif;
+                                   color: #FFCB49;
+                                   position: absolute;
+                                   left: -15px;
+                                   font-size: 180px;
+                                   top: -100px;
+                                   z-index: -1;
+                                   transform: rotate(180deg);
+                              }
+                         .community_item.quote p{
+                              color: var(--color-primary) !important;
+                              font-size: calc(.8rem + .5vw);}
+                              
+                         
+
+     /**SECTION MISC END**/                    
 /**main END**/

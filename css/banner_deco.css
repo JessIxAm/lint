@@ -92,7 +92,7 @@
                               left: 45%;
                               top: 40%;
 
-                              animation: rotate 5s linear infinite alternate;
+                              animation: rotate 5s linear infinite ;
                          }
                          .bar.b_thistle{
                               background-color: thistle;
@@ -103,13 +103,13 @@
                               transform: translateX(50%);
                               top: -20%;
 
-                              animation: rotate 5s linear infinite alternate;
+                              animation: rotate 5s linear infinite ;
                          }
                          @keyframes rotate{
                               0%{
-                                   transform: rotate(-200deg);
+                                   transform: rotate(0deg);
                               }
                               100%{
-                                   transform: rotate(0deg);
+                                   transform: rotate(360deg);
                               }
                          }
