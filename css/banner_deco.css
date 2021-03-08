@@ -1,0 +1,115 @@
+.banner_show .banner_deco{
+                    position: absolute;
+                    z-index: -1;
+                    height: 100%;
+                    width: 100%;
+               }
+                    /*all shapes*/
+                    .banner_deco .shape{
+                         position: absolute;
+                         background-color: var(--bg-primary);
+                         z-index: -1;
+                         opacity: .5;
+                         pointer-events: none;
+                    }
+                    .shape.circle{
+                         border-radius: 50%;
+                         border: 10px solid;
+
+                         transition: top 1s ease, left 1s ease;
+                    }
+                         .circle.c_turquoise{
+                              width: 70px;
+                              height: 70px;
+                              border: 15px solid turquoise;
+
+                              top:3%;
+                              left:3%;
+
+                              animation: move 4s linear infinite alternate;
+                         }
+                         @keyframes move{
+                              0%{
+                                   transform:translate3d(0,0,0);
+                              }
+                              100%{
+                                   transform: translate3d(0,100%,0);
+                              }
+                         }
+                         .circle.c_khaki{
+                              width: 40px;
+                              height: 40px;
+                              border: 10px solid khaki;
+
+                              top:5%;
+                              left:30%;
+
+                              animation: move 4s linear infinite alternate;
+                         }
+                         .circle.c_indigo{
+                              width: 35px;
+                              height: 35px;
+                              border: 8px solid indigo;
+
+                              top:-9%;
+                              left:45%;
+
+                              animation: move 4s linear infinite alternate;
+                         }
+                         .circle.c_lavenderblush{
+                              width: 60px;
+                              height: 60px;
+                              border: 10px solid lavenderblush;
+
+                              top:70%;
+                              left:75%;
+
+                              animation: move 4s linear infinite alternate;
+                         }
+                         .circle.c_powderblue{
+                              width: 80px;
+                              height: 80px;
+                              border: 20px solid powderblue;
+
+                              top:60%;
+                              left:45%;
+
+                              animation: move 4s linear infinite alternate;
+                         }
+                    .shape.bar{
+                         border-radius: 25px;
+                    
+                         transition: transform 2s ease;
+                         transform-origin: center center;
+
+                         
+                    }
+                         .bar.b_tomato{
+                              background-color: tomato;
+                              width: 180px;
+                              height: 30px;
+
+                              left: 45%;
+                              top: 40%;
+
+                              animation: rotate 5s linear infinite alternate;
+                         }
+                         .bar.b_thistle{
+                              background-color: thistle;
+                              width: 180px;
+                              height: 30px;
+
+                              left: 50%;
+                              transform: translateX(50%);
+                              top: -20%;
+
+                              animation: rotate 5s linear infinite alternate;
+                         }
+                         @keyframes rotate{
+                              0%{
+                                   transform: rotate(-200deg);
+                              }
+                              100%{
+                                   transform: rotate(0deg);
+                              }
+                         }
