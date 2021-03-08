@@ -210,33 +210,30 @@ main#main{
 
      /**SECTION MISC START**/
      .misc{
-          position: relative;
-          background: url('https://www.fing.com/images/uploads/banners/TESTIMONIAL_BACKGROUND_IMAGE_1140x530px_V2.jpg');
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: cover;
-          
-          padding: 3rem 1rem; 
+          position: relative; 
+     }
+     .misc *{
+          color: #fff !important;
      }
 
-          .misc .community_overlay{
-               position: absolute;
-               top: 0; bottom: 0;
-               height: 100%; width: 100%;
+          .misc .overlay{
                background-color: rgba(0, 0, 0, 0.26);
                z-index: 50;
           }
           .misc .community{
-               /*? hahahaha nothing here */
+               background: url('https://www.fing.com/images/uploads/banners/TESTIMONIAL_BACKGROUND_IMAGE_1140x530px_V2.jpg');
+               background-position: center;
+               background-repeat: no-repeat;
+               background-size: cover;
+
+               padding: 3rem 1rem;
+               position: relative;
           }
                .community .community_item{
                     position: relative;
                     z-index: 100;
 
                     align-items: flex-start;
-               }
-               .community_item *{
-                    color: #fff !important;
                }
                     .community_item .img_container{
                          height: 60px;
@@ -312,9 +309,87 @@ main#main{
                               }
                          .community_item.quote p{
                               color: var(--color-primary) !important;
-                              font-size: calc(.8rem + .5vw);}
-                              
-                         
+                              font-size: calc(.8rem + .5vw);
+                         }
+
+          .misc .wrapper{
+               position: relative;
+          }
+               .misc .lint{
+                    position: relative;
+                    padding: 3rem 1rem;
+                    z-index: 100;
+               }
+                    .misc .lint h3{
+                         font-weight: 600; 
+                         margin-bottom: calc(2rem + .5vw);
+                    }
+                    .misc .lint p{
+                         font-weight: 300;
+                         margin-bottom: calc(2rem + .5vw);
+                    }
+                    .misc .community_link{
+                         padding: .8rem 1.2rem;
+                         font-size: .7rem;
+                         border-radius: 10px;
+                         background-color: var(--clr-accent-sec);
+
+                         transition: all .6s ease-in;
+                    }
+                         .community_link:hover,
+                         .community_link:focus,
+                         .community_link:active{
+                              background-color: var(--color-accent);
+                         }
+               
+               .lint_app .overlay{
+                    background-color: var(--color-accent);
+                    z-index: -1;
+               }
+     
+               .lintbox .overlay{
+                    background-color: var(--color-primary);
+                    z-index: -1;
+               }
+          .misc .wrapper .shape{
+               
+               border-radius: 50%;
+               background-color: rgba(255, 255, 255, 0.15);
+
+               position: absolute;
+               z-index: 101;
+          }
+          .misc .shape_1{
+               width: 110px;
+               height: 110px;
+
+               top: 45%;
+          }
+
+          .misc .shape_2{
+               height: 50px; width: 150px;
+               border-radius: 10px;
+               transform: rotate(45deg);
+               
+               top: 25%;
+               right: 15%;
+          }
+          .misc .shape_3{
+               height: 100px; width: 150px;
+               border-radius: 10%;
+               transform: rotate(155deg);
+               
+               top: 75%;
+               right: 75%;
+          }
+          .misc .shape_4{
+               height: 50px; width: 150px;
+               border-radius: 10%;
+               transform: rotate(35deg);
+               
+               top: 85%;
+               right: 5%;
+          }             
 
      /**SECTION MISC END**/                    
 /**main END**/

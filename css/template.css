@@ -24,6 +24,11 @@ body{
      justify-content: space-between;
      align-items: center;
 }
+.overlay{
+     position: absolute;
+     top: 0; bottom: 0; right: 0%; left: 0%;
+     height: 100%; width: 100%;
+}
 /**tools end*/
 
 button,input{
@@ -51,10 +56,6 @@ img
      max-width: 80%;
      height: auto;
 }
-
-
-
-
 
 
 
