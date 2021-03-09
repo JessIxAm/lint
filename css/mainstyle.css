@@ -89,7 +89,7 @@ main#main{
                /* banner decoration div END */
 
           /*--banner_show END */
-     /*! banner for xl devices */
+     /*! media query banner for xl devices */
      @media (min-width:992px){
           .wrapper .banner{
                flex-direction: row;
@@ -187,7 +187,7 @@ main#main{
                     .link::after:hover{
                          border-bottom: 2px solid var(--color-accent);
                     } */
-     
+     /*!media queries for div service_cards*/
      
      @media (min-width:992px){
           .wrapper .service_cards{
@@ -211,6 +211,7 @@ main#main{
      /**SECTION MISC START**/
      .misc{
           position: relative; 
+          margin-bottom: calc(1.8rem + 2vw);
      }
      .misc *{
           color: #fff !important;
@@ -295,6 +296,8 @@ main#main{
                          border-radius: 20px;
                          padding: 2rem;
                          position: relative;
+
+                         max-width: 34.75rem;
                     }
                     .community_item.quote::before{
                                    content: '\0022';
@@ -389,7 +392,62 @@ main#main{
                
                top: 85%;
                right: 5%;
-          }             
+          }   
+     
+     /*!media queries for section misc*/
+     @media (min-width:768px){ 
+          .misc .wrapper.flex_col{
+               flex-direction: row;
+          }
+          .misc .wrapper .lint{
+               flex: 0 0 50%;
+               height: 100%;
+          }
+          /* .misc .lint_app *:not(.overlay){ --no more needed
+               position: relative;
+               z-index: 1000;
+          } */
+               .wrapper .tweak_for_lint_app{
+                    background-color: var(--color-accent);
+                    width: 50%;
+               }
+     }
+     @media (min-width:992px){ 
+          .misc .community.flex_col{
+               flex-direction: row;
+          }
+          .community .community_item{
+               flex: 0 0 48%;
+          }
+               .community_item .stars{
+                    max-width: 150px;
+               } 
+               .community_item .ratings{
+                    max-width: 22.6rem;
+               }
+                    .ratings .store{
+                         white-space: nowrap;
+                    }
+                    .ratings .store:first-of-type{
+                         margin-right: 1rem;
+                    }
+               .community_item .download_btn{
+                    max-width: 19.6rem;
+               }
+     }
+     @media (min-width:1400px){
+     .community .quote{
+               margin-right: calc(5% + 3vw);
+          }
 
-     /**SECTION MISC END**/                    
+     /**SECTION MISC END**/ 
+     
+     /**SECTION NEWS START **/
+     /**SECTION NEWS END **/
+     
+
+
+
+
+
 /**main END**/
