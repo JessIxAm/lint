@@ -9,6 +9,7 @@
      --bg-primary:#fefefe;
      --bg-secondary:#e7e7e7;
 
+     --mg-bottom-max:calc(1.8rem + 2vw);
 }
 
 body *{
@@ -439,10 +440,25 @@ main#main{
      .community .quote{
                margin-right: calc(5% + 3vw);
           }
+     }
 
      /**SECTION MISC END**/ 
      
      /**SECTION NEWS START **/
+     #main .news{
+          position: relative;
+          margin-bottom: var(--mg-bottom-max); /*!change it everywhere*/
+     }
+
+          .news h2{
+               font-size: calc(1.3rem + 1.1vw);
+               font-weight: 600;
+               text-align: center;
+
+               margin-bottom: calc(.8rem + 2vw);
+          }
+
+
      /**SECTION NEWS END **/
      
 
@@ -451,3 +467,73 @@ main#main{
 
 
 /**main END**/
+
+
+/** FOOTER **/
+footer#footer{
+     background-color: var(--color-primary);
+}
+footer *{
+     color: var(--bg-primary) !important;
+}
+
+     #footer .social{
+          margin-bottom: calc(1rem + .5vw);
+     }
+          .social > div:first-of-type{
+               max-width: 150px;
+          }
+               .social > div:first-of-type a{
+                    justify-content: flex-start;
+               }
+               .social .follow_us{
+                    padding: 1rem 0 !important;
+                    justify-content: flex-start;
+
+               }
+                    .social .follow_us h5{
+                         white-space: nowrap;
+                         font-size: 1.05rem;
+                         font-weight: 600;
+                         margin-bottom: 0;
+                         justify-content: flex-start;
+                    }
+                    .social .follow_us .icon_sn{
+                         justify-content: flex-start;
+                    }
+                         #footer .icon_sn a{
+                              width: 30px;
+                              margin-right: 1rem;
+                         }
+                              #footer .icon_sn a:focus,
+                              #footer .icon_sn a:hover,
+                              #footer .icon_sn a:active{
+                                   color: var(--color-accent) !important;
+                              }
+
+     #footer .pages{
+     }
+     #footer .pages *{
+          line-height: 2.5 !important;
+          font-size: calc(.6rem + .5vw);
+     }
+          .pages a:focus,
+          .pages a:hover,
+          .pages a:active{
+               text-decoration: underline;
+               font-weight: 500;
+          }
+
+     @media (min-width:768px){
+          footer#footer{
+               padding-top:2rem;
+               padding-bottom:2rem;
+          }
+          #footer .wrapper.flex{
+               justify-content: space-between;
+          }
+          #footer .social{
+               flex-direction: column;
+          }
+     }
+
