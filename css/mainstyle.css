@@ -29,7 +29,7 @@ main#main{
      /* banner START */
      #main .banner{
           position: relative; /*! to remove */
-          margin-bottom: calc(1.8rem + 2vw);
+          margin-bottom: var(--mg-bottom-max);
      }    
           /*--intro*/
           .banner .intro{
@@ -212,7 +212,7 @@ main#main{
      /**SECTION MISC START**/
      .misc{
           position: relative; 
-          margin-bottom: calc(1.8rem + 2vw);
+          margin-bottom: var(--mg-bottom-max);
      }
      .misc *{
           color: #fff !important;
@@ -462,6 +462,28 @@ main#main{
      /**SECTION NEWS END **/
      
 
+     /** SECTION BRANDS START**/
+     #main .brands{
+          margin-bottom: var(--mg-bottom-max);
+
+          padding: 1rem 0;
+     }
+          .brands h2{
+               font-size: calc(1.3rem + 1.1vw);
+               font-weight: 600;
+               text-align: center;
+
+               margin-bottom: calc(.8rem + 2vw);
+          }
+          .brands .col{
+               filter: grayscale(100%);
+               -webkit-filter: grayscale(100%);
+          }
+          .brands .col:hover{
+               filter: grayscale(0);
+               -webkit-filter: grayscale(0);
+          }
+     /** SECTION BRANDS END**/
 
 
 
@@ -469,7 +491,8 @@ main#main{
 /**main END**/
 
 
-/** FOOTER **/
+
+/** FOOTER START**/
 footer#footer{
      background-color: var(--color-primary);
 }
@@ -537,3 +560,4 @@ footer *{
           }
      }
 
+/** FOOTER END**/
