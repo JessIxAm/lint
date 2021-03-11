@@ -161,7 +161,7 @@ main#main{
                          text-align: left;
                          font-weight: 500;
 
-                         font-size: calc(1rem + .5vw);
+                         font-size: calc(.7rem + .5vw);
                          color: var(--color-accent) !important;
 
                          display: inline-block;
@@ -455,9 +455,88 @@ main#main{
                font-size: calc(1.3rem + 1.1vw);
                font-weight: 600;
                text-align: center;
-
                margin-bottom: calc(.8rem + 2vw);
           }
+          .news .carousel_container{
+               margin-bottom: calc(.8rem + 2vw);
+               
+          }
+               .news .carousel_container .glider-contain{
+                    position: relative;
+               }
+                    .news .carousel_container .glider-contain .glider2{
+                         
+                    }
+                         .glider2 .card{
+                              margin: 1rem .5rem;
+                              border-radius: 15px;
+                              position: relative;
+
+                              align-items: stretch;
+                         }
+                              .glider2 img{
+                                   border-top-left-radius: 15px;
+                                   border-top-right-radius: 15px;
+                                   flex: 0 0 50%;
+                                   height: 50%;
+                              }
+                              .glider2 .icon{
+                                   width: 50px; height: 50px;
+                                   border-radius: 50%;
+                                   background-color: #ffcb49b0;
+                                   position: absolute;
+                                   top: 50%;
+                                   right: 5%;
+                                   transform: translate(5%, -50%);
+                              }
+                                   .glider2 .icon strong{
+                                        color: var(--bg-primary) !important;
+                                   }
+                              .glider2 .card-body{
+                                   background-color: #e7e7e7;
+                                   height: 50%;
+                                   border-bottom-left-radius: 15px;
+                                   border-bottom-right-radius: 15px;
+                              }
+                                   .glider2 .card-body h5{
+                                        margin-bottom: 1rem;
+                                   }
+                                   .glider2 .card-body .link{
+                                        margin-bottom: .5rem;
+                                   }
+                    .news .carousel_container .glider-contain button{
+                         width: 10%;
+                         height: 100%;
+                         position: absolute;   
+                         display: flex;
+                         flex-direction: column;
+                         justify-content: flex-end;  
+
+                         font-weight: 900;
+                         font-size: 2rem;
+                    }
+                         .news .carousel_container .glider-contain button:first-of-type{
+                              justify-content: flex-start;     
+                         }
+                         .news .carousel_container .glider-contain button:last-of-type{
+                              
+                              right: 0;     
+                         }
+                    .news .btn.special {
+                         background-color: var(--color-accent);
+                         transition: .5s all ease-in;
+                         padding: .5rem 1rem !important;
+                         color: var(--bg-primary) !important;
+                         height: 42px;
+                         border: none;
+
+                         transition: background-color 0.6s ease-in ;
+                    }
+                         .news .btn.special:hover, 
+                         .news .btn.special:focus{
+                         background-color: var(--clr-accent-sec);
+                    }
+
 
 
 
@@ -492,8 +571,7 @@ main#main{
                          text-align: right;
                          font-weight: 900;
                     }
-                         .glider-contain button:hover,
-                         .glider-contain button:focus{
+                         .glider-contain button:hover{
                               color: var(--color-accent) !important;
                          }
                     .glider-contain button:first-of-type{
