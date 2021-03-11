@@ -460,6 +460,7 @@ main#main{
           }
 
 
+
      /**SECTION NEWS END **/
      
 
@@ -467,7 +468,7 @@ main#main{
      /** SECTION TWEETS START**/
      #main .tweets{
           margin-bottom: var(--mg-bottom-max);
-          padding: 1rem 2rem;
+          padding: .5rem 2rem;
      }    
           .tweets h2{
                font-size: calc(1.3rem + 1.1vw);
@@ -491,6 +492,10 @@ main#main{
                          text-align: right;
                          font-weight: 900;
                     }
+                         .glider-contain button:hover,
+                         .glider-contain button:focus{
+                              color: var(--color-accent) !important;
+                         }
                     .glider-contain button:first-of-type{
                          
                          transform: rotate(-180deg);
