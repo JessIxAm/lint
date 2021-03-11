@@ -5,6 +5,7 @@
      --color-accent--700: #0d6efd;
      --clr-accent-sec:#f63877;
      --clr-accent-sec--200:#f638771a;
+     --clr-accent-th:#FFCB49;
      
      --bg-primary:#fefefe;
      --bg-secondary:#e7e7e7;
@@ -303,7 +304,7 @@ main#main{
                     .community_item.quote::before{
                                    content: '\0022';
                                    font-family: 'Palanquin', sans-serif;
-                                   color: #FFCB49;
+                                   color: var(--clr-accent-th);
                                    position: absolute;
                                    left: -15px;
                                    font-size: 180px;
@@ -462,17 +463,116 @@ main#main{
      /**SECTION NEWS END **/
      
 
+
+     /** SECTION TWEETS START**/
+     #main .tweets{
+          margin-bottom: var(--mg-bottom-max);
+          padding: 1rem 2rem;
+     }    
+          .tweets h2{
+               font-size: calc(1.3rem + 1.1vw);
+               font-weight: 600;
+               text-align: center;
+               margin-bottom: calc(.8rem + 2vw);
+          }
+
+          .tweets .carousel_container{
+               padding: 1rem;
+               position: relative;
+          }
+               .carousel_container .glider-contain{
+                    position: relative;
+               }
+                    .glider-contain button{
+                         top: 0;
+                         bottom: 0;
+
+                         width: 15%;
+                         text-align: right;
+                         font-weight: 900;
+                    }
+                    .glider-contain button:first-of-type{
+                         
+                         transform: rotate(-180deg);
+                    }
+                    .glider-contain .glider{
+                         padding: calc(1rem + .5vw) 0;
+                         min-width: 310px;
+                    }
+          
+          .tweets_item{
+               font-size: .9rem !important;
+               max-width: 310px !important; 
+               border-radius: 20px;
+               /* border: 1px solid rgb(214, 214, 214); */
+               box-shadow: 0 0 10px var(--color-accent);
+               padding: 1rem;
+               margin-left: .5rem;
+               margin-right: .5rem;
+               
+          }
+          .tweets_item:last-of-type{
+               margin-right: 0;
+          }
+               .tweets_item .tweets_item_header{
+                    justify-content: space-between;
+                    margin-bottom: 2.5rem;
+               }
+                    .tweets_item_header a{
+                         color: var(--color-accent) !important;
+                         font-weight: 500;
+                    }
+               .tweets_item .tweets_item_body{
+                    margin-bottom: 2.5rem;
+               }
+                    .tweets_item_body p{
+                         line-height: 2 !important;
+                    }
+                    .tweets_item_body a{
+                         color: var(--color-accent--700) !important;
+                         text-decoration: underline;
+                         padding-bottom: .3rem;
+                    }
+               .tweets_item .tweets_item_footer{
+                    font-size: 1rem !important;
+                    display: flex;
+               }
+                    .tweets_item_footer .icon::before{
+                         color: var(--clr-accent-th) !important;
+                         margin-right: .6rem;
+                    }
+                    .tweets_item_footer .icon_like::before{
+                         content: '\e904';
+                    }
+                    .tweets_item_footer .icon_comment::before{
+                         content: '\e902';
+                    }.tweets_item_footer .icon_share::before{
+                         content: '\e90a';
+                    }
+     /*! media queries for Tweets Section */
+     @media (max-width:400px){
+          #main .tweets{
+               padding: 1rem .5rem !important;
+          } 
+          .glider-contain button.glider-prev,
+          .glider-contain button.glider-next{
+               display: none ;
+          }
+     }
+
+     /** SECTION TWEETS END**/
+
+
+
      /** SECTION BRANDS START**/
      #main .brands{
           margin-bottom: var(--mg-bottom-max);
-
           padding: 1rem 0;
      }
           .brands h2{
                font-size: calc(1.3rem + 1.1vw);
                font-weight: 600;
                text-align: center;
-
                margin-bottom: calc(.8rem + 2vw);
           }
           .brands .col{
@@ -561,3 +661,5 @@ footer *{
      }
 
 /** FOOTER END**/
+
+
