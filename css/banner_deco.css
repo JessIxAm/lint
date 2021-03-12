@@ -5,7 +5,7 @@
                     width: 100%;
                }
                     /*all shapes*/
-                    .banner_deco .shape{
+                    .shape{
                          position: absolute;
                          background-color: var(--bg-primary);
                          z-index: -1;
@@ -86,6 +86,16 @@
                     }
                          .bar.b_tomato{
                               background-color: tomato;
+                              width: 180px;
+                              height: 30px;
+
+                              left: 45%;
+                              top: 40%;
+
+                              animation: rotate 5s linear infinite ;
+                         }
+                         .bar.b_tomato2{
+                              background-color: rgba(255, 99, 71, 0.158);
                               width: 180px;
                               height: 30px;
 

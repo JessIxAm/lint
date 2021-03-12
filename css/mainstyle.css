@@ -439,7 +439,8 @@ main#main{
      }
      @media (min-width:1400px){
      .community .quote{
-               margin-right: calc(5% + 3vw);
+               margin-right: calc(25% );
+               transform: translateX(50%);
           }
      }
 
@@ -548,6 +549,7 @@ main#main{
      #main .tweets{
           margin-bottom: var(--mg-bottom-max);
           padding: .5rem 2rem;
+          position: relative;
      }    
           .tweets h2{
                font-size: calc(1.3rem + 1.1vw);
@@ -678,6 +680,7 @@ main#main{
 /** FOOTER START**/
 footer#footer{
      background-color: var(--color-primary);
+     position: relative;
 }
 footer *{
      color: var(--bg-primary) !important;
